@@ -3,7 +3,7 @@ import plotly.express as px
 import streamlit as st
 
 # Read the CSV file
-df = pd.read_csv('/Users/timmdill/Downloads/sst_alldata.csv')
+df = pd.read_csv('Data/sst_alldata.csv')
 df['Timestamp'] = pd.to_datetime(df['Timestamp'])
 recent_stations = df.loc[df.groupby('Automatennr')['Timestamp'].idxmax()]
 
